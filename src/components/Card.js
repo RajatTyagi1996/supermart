@@ -22,7 +22,7 @@ const Card = ({data, cart, setCart}) => {
             </div>
         </div>
         <div className="cardfooter">
-            <span>Price:$<del>{data.price}</del><b><ins style={{marginLeft: "4px"}}>{data.price - data.discountAmount}</ins></b></span>
+            <span>Price:$<del>{data.price}</del><b><ins style={{marginLeft: "4px"}}>{(data.price - data.discountAmount).toFixed(2)}</ins></b></span>
             <span><button onClick={addToCart} className="button">{count == 0 ? "Add to Cart" : "Add (" + count + ")"}</button></span>
         </div>
     </div>
